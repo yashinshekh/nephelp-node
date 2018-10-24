@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors';
+const cors = require('cors');
 
 const app = express();
 
@@ -11,7 +11,7 @@ connectMongoose();
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors());
 
 routeSchema(app);
 
